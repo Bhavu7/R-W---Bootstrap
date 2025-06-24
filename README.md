@@ -21,7 +21,7 @@ A clean, responsive, and fully redesigned **R-W Website Clone** built with 💡 
 ---
 
 ## 📸 Screenshots
-[Screenshot](images/Screenshot.png)
+![Screenshot](images/Screenshot.png)
 
 ---
 
