@@ -23,7 +23,7 @@ A clean, responsive, and fully redesigned **R-W Website Clone** built with 💡 
 ## 📸 Screenshots
 
 > _Add screenshots here if desired. Use markdown like:_  
-> `![Screenshot](Screenshot.png)`
+> [Screenshot](Screenshot.png)
 
 ---
 
