@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form & Formats - D N Institute of Computer Applications</title>
+    <link rel="shortcut icon" href="images/cesLogo.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar" data-aos="fade-down">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="mailto:dnica@cesociety.in"
+              ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+            >
+            <a href="tel:02692266679" class="ms-3"
+              ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+            >
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="text-white-50"
+              ><i class="fas fa-clock me-2"></i>Last Updated: Jun 7, 2025</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top" data-aos="fade-up"
+     data-aos-duration="800">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div class="d-flex align-items-center" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+            <img src="images/cesLogo.png" alt="DN Institute Logo" />
+            <div>
+              <span>D N Institute of Computer Applications</span>
+              <p>DNICA</p>
+            </div>
+          </div>
+        </a>
+        <button
+          title="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3" data-aos="zoom-in-down">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#aboutUs"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item has-submenu" href="#">Department</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="bca.html">BCA</a></li>
+                    <li>
+                      <a class="dropdown-item" href="bscIT.html">BSc CA & IT</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="gallery.html">Gallery</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+              </ul>
+            </li>
+
+            <!-- Student Corner Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="studentDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Student Corner
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="studentDropdown">
+                <li><a class="dropdown-item" href="Alumni.html">Alumni</a></li>
+                <li><a class="dropdown-item" href="Results.html">Results</a></li>
+                <li><a class="dropdown-item" href="Syllabus.html">Syllabus</a></li>
+                <li><a class="dropdown-item" href="Placement-Cell.html">Placement Cell</a></li>
+                <li><a class="dropdown-item" href="Admission.html">Admission Open</a></li>
+                <li><a class="dropdown-item" href="FormsAndFormat.html">Form & Formats</a></li>
+                <li><a class="dropdown-item" href="Academic.html">Academic Calendar</a></li>
+                <li>
+                  <a class="dropdown-item" href="OldQuestionPapers.html">Old Question Papers</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Scholarships.html">Scholarship For Students</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="activitiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li>
+                  <a class="dropdown-item" href="co-curricular.html"
+                    >Co-curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="extra-curricular.html"
+                    >Extra-Curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="additional-activities.html"
+                    >Additional Activities</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="search-box" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+            <form action="#">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search..."
+              />
+              <button title="Search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section forms-hero" data-aos="fade-up" data-aos-duration="800">
+      <div class="hero-content text-center">
+        <h1 data-aos="fade-up" data-aos-duration="1000">Form & Formats</h1>
+        <p data-aos="fade-up" data-aos-duration="1200">Access all essential forms and formats for students and faculty</p>
+        <a href="#forms-section" class="btn hero-btn" data-aos="fade-up" data-aos-duration="1400">
+          Download Forms <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Forms Overview -->
+    <section class="forms-overview py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up" data-aos-duration="800">About Forms & Formats</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+            <img src="https://cdn.neowin.com/news/images/uploaded/2018/04/1525107123_tc-img-grid-forms_story.jpg" class="img-fluid about-img" alt="Forms Overview" />
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <p>
+              The Form & Formats section provides a centralized repository for all necessary documents required by students, faculty, and staff at DNICA. From admission forms to exam applications, scholarship requests, and more, you can easily download the required templates in PDF format.
+            </p>
+            <p>
+              For any assistance with filling out or submitting forms, please contact our administrative office via the contact section below.
+            </p>
+            <a href="#forms-section" class="btn read-more-btn">Explore Forms <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section class="forms-section py-5 bg-light" id="forms-section">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up" data-aos-duration="800">Download Forms</h2>
+        <div class="accordion" id="formsAccordion" data-aos="fade-up" data-aos-duration="1000">
+          <!-- Admission Forms -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="admissionForms">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdmission" aria-expanded="true" aria-controls="collapseAdmission">
+                Admission Forms
+              </button>
+            </h2>
+            <div id="collapseAdmission" class="accordion-collapse collapse show" aria-labelledby="admissionForms" data-bs-parent="#formsAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Application Form for BCA
+                    <a href="documents/bca_application_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Application Form for BSc CA & IT
+                    <a href="documents/bscit_application_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Examination Forms -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="examForms">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExam" aria-expanded="false" aria-controls="collapseExam">
+                Examination Forms
+              </button>
+            </h2>
+            <div id="collapseExam" class="accordion-collapse collapse" aria-labelledby="examForms" data-bs-parent="#formsAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Exam Registration Form
+                    <a href="documents/exam_registration_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Revaluation Form
+                    <a href="documents/revaluation_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Scholarship Forms -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="scholarshipForms">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScholarship" aria-expanded="false" aria-controls="collapseScholarship">
+                Scholarship Forms
+              </button>
+            </h2>
+            <div id="collapseScholarship" class="accordion-collapse collapse" aria-labelledby="scholarshipForms" data-bs-parent="#formsAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Merit-Based Scholarship Application
+                    <a href="documents/merit_scholarship_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Need-Based Scholarship Application
+                    <a href="documents/need_scholarship_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Miscellaneous Forms -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="miscForms">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMisc" aria-expanded="false" aria-controls="collapseMisc">
+                Miscellaneous Forms
+              </button>
+            </h2>
+            <div id="collapseMisc" class="accordion-collapse collapse" aria-labelledby="miscForms" data-bs-parent="#formsAccordion">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Leave Application Form
+                    <a href="documents/leave_application_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Bonafide Certificate Request
+                    <a href="documents/bonafide_request_form.pdf" class="btn btn-sm hero-btn" target="_blank">
+                      <i class="fas fa-download me-2"></i>Download
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section class="forms-contact py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up" data-aos-duration="800">Need Assistance?</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-info text-center" data-aos="fade-up" data-aos-duration="1000">
+              <p>
+                For any queries regarding forms or submission processes, please reach out to our administrative office.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-envelope me-2"></i><a href="mailto:dnica@cesociety.in">dnica@cesociety.in</a></li>
+                <li><i class="fas fa-phone me-2"></i><a href="tel:02692266679">(02692) 266679</a></li>
+                <li><i class="fas fa-map-marker-alt me-2"></i>M.B.Patel Science College Campus, Anand, Gujarat 388001</li>
+              </ul>
+              <a href="contact.html" class="btn hero-btn mt-3">Contact Us <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Explore
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"><i class="fas fa-chevron-right me-2"></i>Home</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#aboutUs"><i class="fas fa-chevron-right me-2"></i>About</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="gallery.html"><i class="fas fa-chevron-right me-2"></i>Gallery</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Campus List
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Anand Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Khetiwadi Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Mogri Campus</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Social Media
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a
+                  rel="noopener"
+                  href="https://www.facebook.com/cesociety"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f me-2"></i>Facebook</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a
+                  rel="noopener"
+                  href="https://x.com/ces100anand"
+                  target="_blank"
+                  ><i class="fab fa-twitter me-2"></i>Twitter</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a
+                  rel="noopener"
+                  href="https://www.instagram.com/cesociety_1916/"
+                  target="_blank"
+                  ><i class="fab fa-instagram me-2"></i>Instagram</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a
+                  rel="noopener"
+                  href="https://www.linkedin.com/company/82105326/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in me-2"></i>LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Address
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  M.B.Patel Science College Campus, Behind D.N.High School, Near
+                  Sardar Gunj, Anand, Gujarat 3880
+                </a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="tel:+912692266679"
+                  ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="mailto:mbpas@outlook.com"
+                  ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">
+                &copy; 2025 All Rights Reserved By Charotar Education Society.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <span
+                >Developed By
+                <a
+                  rel="noopener noreferrer"
+                  href="https://bhavu7.github.io/BhavuVerse/"
+                  target="_blank"
+                  class="developer-link"
+                  >Bhavesh Bhoi</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

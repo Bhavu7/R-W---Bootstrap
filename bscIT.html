@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSc CA & IT - D N Institute of Computer Applications</title>
+    <link rel="shortcut icon" href="images/cesLogo.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar" data-aos="fade-down">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="mailto:dnica@cesociety.in"
+              ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+            >
+            <a href="tel:02692266679" class="ms-3"
+              ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+            >
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="text-white-50"
+              ><i class="fas fa-clock me-2"></i>Last Updated: Jun 7, 2025</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div
+            class="d-flex align-items-center"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="images/cesLogo.png" alt="DN Institute Logo" />
+            <div>
+              <span>D N Institute of Computer Applications</span>
+              <p>DNICA</p>
+            </div>
+          </div>
+        </a>
+        <button
+          title="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3" data-aos="zoom-in-down">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#aboutUs"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item has-submenu" href="#">Department</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="bca.html">BCA</a></li>
+                    <li>
+                      <a class="dropdown-item" href="bscIT.html">BSc CA & IT</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="gallery.html">Gallery</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+              </ul>
+            </li>
+
+            <!-- Student Corner Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="studentDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Student Corner
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="studentDropdown">
+                <li><a class="dropdown-item" href="Alumni.html">Alumni</a></li>
+                <li>
+                  <a class="dropdown-item" href="Results.html">Results</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Syllabus.html">Syllabus</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Placement-Cell.html"
+                    >Placement Cell</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Admission.html"
+                    >Admission Open</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="FormsAndFormat.html"
+                    >Form & Formats</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Academic.html"
+                    >Academic Calendar</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="OldQuestionPapers.html"
+                    >Old Question Papers</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Scholarships.html"
+                    >Scholarship For Students</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="activitiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li>
+                  <a class="dropdown-item" href="co-curricular.html"
+                    >Co-curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="extra-curricular.html"
+                    >Extra-Curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="additional-activities.html"
+                    >Additional Activities</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div
+            class="search-box"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <form action="#">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search..."
+              />
+              <button title="Search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BSc CA & IT Section -->
+    <section class="department-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">
+          BSc Computer Applications & Information Technology
+        </h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="https://nagarjunacollege.edu.np/public/uploads/1605768.png"
+              class="img-fluid about-img"
+              alt="BSc CA & IT Program"
+            />
+          </div>
+          <div class="col-lg-6 about-content">
+            <h3>About BSc CA & IT</h3>
+            <p>
+              The BSc in Computer Applications & Information Technology at DNICA
+              is a three-year undergraduate program focusing on advanced IT
+              concepts, networking, and system administration. Affiliated with
+              Sardar Patel University, it prepares students for dynamic careers
+              in IT infrastructure, cybersecurity, and software solutions.
+            </p>
+            <button class="btn read-more-btn">
+              Apply Now <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects and Syllabus -->
+    <section class="syllabus-section py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">
+          BSc CA & IT Subjects & Syllabus
+        </h2>
+        <div class="row">
+          <div class="col-12">
+            <p>
+              The BSc CA & IT curriculum spans six semesters, integrating IT
+              fundamentals, networking, and advanced technologies. Below is an
+              overview of key subjects and their weightage.
+            </p>
+            <h4>Core Subjects</h4>
+            <ul>
+              <li>
+                <strong>Computer Networks</strong>: LAN, WAN, network protocols,
+                and security.
+              </li>
+              <li>
+                <strong>Cloud Computing</strong>: Cloud models, virtualization,
+                AWS basics.
+              </li>
+              <li>
+                <strong>Cybersecurity</strong>: Cryptography, ethical hacking,
+                security policies.
+              </li>
+              <li>
+                <strong>Database Administration</strong>: Oracle, MySQL,
+                database optimization.
+              </li>
+              <li>
+                <strong>Programming in Python</strong>: Python syntax, data
+                analysis, automation.
+              </li>
+              <li>
+                <strong>IT Infrastructure Management</strong>: Server
+                management, ITIL framework.
+              </li>
+            </ul>
+            <h4>Syllabus Weightage</h4>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Credits</th>
+                  <th>Weightage (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Core Subjects</td>
+                  <td>64</td>
+                  <td>53%</td>
+                </tr>
+                <tr>
+                  <td>Electives</td>
+                  <td>20</td>
+                  <td>17%</td>
+                </tr>
+                <tr>
+                  <td>Practical & Projects</td>
+                  <td>28</td>
+                  <td>23%</td>
+                </tr>
+                <tr>
+                  <td>Foundation Courses</td>
+                  <td>8</td>
+                  <td>7%</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <a href="#" class="btn hero-btn"
+                >Download Full Syllabus <i class="fas fa-download ms-2"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Our Faculty</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card faculty-card text-center">
+              <img
+                src="https://amity.edu/greaternoida/images/faculty-overview-img1.jpg"
+                class="card-img-top"
+                alt="Faculty 4"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. Priya Shah</h5>
+                <p class="card-text">Head of Department, BSc CA & IT</p>
+                <p>
+                  Ph.D. in Information Technology, specializes in cybersecurity
+                  and cloud computing.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card faculty-card text-center">
+              <img
+                src="https://amity.edu/greaternoida/images/faculty-overview-img1.jpg"
+                class="card-img-top"
+                alt="Faculty 5"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Prof. Amit Trivedi</h5>
+                <p class="card-text">Associate Professor</p>
+                <p>
+                  MSc IT, expert in computer networks and IT infrastructure
+                  management.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card faculty-card text-center">
+              <img
+                src="https://amity.edu/greaternoida/images/faculty-overview-img1.jpg"
+                class="card-img-top"
+                alt="Faculty 6"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ms. Kavita Mehta</h5>
+                <p class="card-text">Lecturer</p>
+                <p>
+                  MCA, focuses on Python programming and database
+                  administration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Explore
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"><i class="fas fa-chevron-right me-2"></i>Home</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#aboutUs"
+                  ><i class="fas fa-chevron-right me-2"></i>About</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="gallery.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Gallery</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Campus List
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Anand Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Khetiwadi Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Mogri Campus</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Social Media
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a
+                  rel="noopener"
+                  href="https://www.facebook.com/cesociety"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f me-2"></i>Facebook</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a
+                  rel="noopener"
+                  href="https://x.com/ces100anand"
+                  target="_blank"
+                  ><i class="fab fa-twitter me-2"></i>Twitter</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a
+                  rel="noopener"
+                  href="https://www.instagram.com/cesociety_1916/"
+                  target="_blank"
+                  ><i class="fab fa-instagram me-2"></i>Instagram</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a
+                  rel="noopener"
+                  href="https://www.linkedin.com/company/82105326/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in me-2"></i>LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Address
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  M.B.Patel Science College Campus, Behind D.N.High School, Near
+                  Sardar Gunj, Anand, Gujarat 3880
+                </a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="tel:+912692266679"
+                  ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="mailto:mbpas@outlook.com"
+                  ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">
+                &copy; 2025 All Rights Reserved By Charotar Education Society.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <span
+                >Developed By
+                <a
+                  rel="noopener noreferrer"
+                  href="https://bhavu7.github.io/BhavuVerse/"
+                  target="_blank"
+                  class="developer-link"
+                  >Bhavesh Bhoi</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

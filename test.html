@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D N Institute of Computer Applications</title>
+    <link rel="shortcut icon" href="images/cesLogo.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --primary-light: #3b82f6;
+        --secondary: #10b981;
+        --dark: #1f2937;
+        --light: #f9fafb;
+        --gray: #6b7280;
+        --light-gray: #e5e7eb;
+        --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        padding: 0.6rem 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-outline-primary {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      .btn-outline-primary:hover {
+        background-color: var(--primary);
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-dark);
+      }
+
+      .section-title:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: var(--gradient);
+        margin-top: 1rem;
+        border-radius: 2px;
+      }
+
+      /* Header Styles */
+      .top-bar {
+        background-color: var(--primary-dark);
+        color: white;
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+      }
+
+      .top-bar a {
+        color: var(--light-gray);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .top-bar a:hover {
+        color: white;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: white;
+        box-shadow: var(--shadow);
+        padding: 0.8rem 0;
+        transition: all 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-brand img {
+        height: 45px;
+        margin-right: 12px;
+      }
+
+      .navbar-brand .logo-text {
+        line-height: 1.2;
+      }
+
+      .navbar-brand .logo-text span {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        display: block;
+      }
+
+      .navbar-brand .logo-text p {
+        font-size: 0.8rem;
+        color: var(--gray);
+        margin: 0;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        color: var(--dark);
+        position: relative;
+        margin: 0 0.2rem;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary);
+      }
+
+      .nav-link:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        right: 1rem;
+        height: 2px;
+        background: var(--primary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .nav-link:hover:after, .nav-link.active:after {
+        transform: scaleX(1);
+      }
+
+      .dropdown-menu {
+        border: none;
+        box-shadow: var(--shadow-lg);
+        border-radius: 8px;
+        padding: 0.5rem;
+        min-width: 220px;
+        margin-top: 0.5rem;
+      }
+
+      .dropdown-item {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+        font-weight: 500;
+      }
+
+      .dropdown-item:hover {
+        background-color: rgba(37, 99, 235, 0.1);
+        color: var(--primary);
+      }
+
+      .dropdown-submenu .dropdown-menu {
+        left: 100%;
+        top: 0;
+        margin-left: 0.1rem;
+      }
+
+      .search-box {
+        position: relative;
+        max-width: 250px;
+        margin-left: 1rem;
+      }
+
+      .search-box input {
+        padding-right: 40px;
+        border-radius: 50px;
+        border: 1px solid var(--light-gray);
+        font-size: 0.9rem;
+      }
+
+      .search-box button {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--gray);
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        height: 90vh;
+        min-height: 600px;
+        overflow: hidden;
+        background: var(--gradient);
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .hero-btn {
+        background-color: white;
+        color: var(--primary);
+        border: none;
+        padding: 0.8rem 2.5rem;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+        opacity: 0.3;
+      }
+
+      /* About Section */
+      .about-section {
+        background-color: var(--light);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-img {
+        border-radius: 12px;
+        box-shadow: var(--shadow-lg);
+        transition: transform 0.3s ease;
+      }
+
+      .about-img:hover {
+        transform: scale(1.02);
+      }
+
+      .about-content h3 {
+        color: var(--primary-dark);
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      .about-content p {
+        color: var(--dark);
+        margin-bottom: 1.5rem;
+      }
+
+      .feature-box {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        height: 100%;
+        border-top: 4px solid var(--primary);
+      }
+
+      .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Principal Section */
+      .principal-section {
+        background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+        background-size: cover;
+        position: relative;
+        color: white;
+      }
+
+      .principal-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      .principal-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+        color: var(--dark);
+      }
+
+      .principal-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .principal-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .principal-content {
+        padding: 2rem;
+      }
+
+      .principal-title {
+        color: var(--primary-dark);
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .principal-label {
+        color: var(--secondary);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
+      /* Quick Links */
+      .quick-link-card {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        height: 100%;
+        border-bottom: 4px solid var(--primary);
+      }
+
+      .quick-link-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .quick-link-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient);
+        color: white;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .quick-link-card h5 {
+        color: var(--primary-dark);
+        margin-bottom: 1rem;
+      }
+
+      /* Departments */
+      .department-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .department-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .department-img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .department-body {
+        padding: 1.5rem;
+      }
+
+      .department-title {
+        color: var(--primary-dark);
+        margin-bottom: 1rem;
+      }
+
+      .department-text {
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Counter */
+      .counter-section {
+        background: var(--gradient);
+        color: white;
+        padding: 4rem 0;
+      }
+
+      .counter-item {
+        text-align: center;
+        padding: 1.5rem;
+      }
+
+      .counter-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .counter-text {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 4rem 0 0;
+      }
+
+      .footer-title {
+        color: white;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 0.8rem;
+      }
+
+      .footer-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: var(--primary);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-links a {
+        color: var(--light-gray);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        margin-right: 0.8rem;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: var(--primary);
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 0;
+        margin-top: 3rem;
+      }
+
+      .developer-link {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .developer-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Animation */
+      [data-aos] {
+        transition: all 0.8s ease;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1199.98px) {
+        .hero-content h1 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-brand img {
+          height: 40px;
+        }
+        
+        .hero-section {
+          height: auto;
+          padding: 7rem 0;
+        }
+        
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+        
+        .hero-pattern {
+          display: none;
+        }
+        
+        .section {
+          padding: 4rem 0;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .navbar-brand .logo-text span {
+          font-size: 1rem;
+        }
+        
+        .navbar-brand .logo-text p {
+          font-size: 0.7rem;
+        }
+        
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+        
+        .search-box {
+          margin: 1rem 0;
+          max-width: 100%;
+        }
+        
+        .dropdown-menu {
+          margin-left: 1rem;
+          box-shadow: none;
+          border-left: 2px solid var(--primary);
+        }
+        
+        .dropdown-submenu .dropdown-menu {
+          left: 0;
+          top: 100%;
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .hero-section {
+          padding: 5rem 0;
+          text-align: center;
+        }
+        
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar" data-aos="fade-down">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="mailto:dnica@cesociety.in"><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a>
+            <a href="tel:02692266679" class="ms-3"><i class="fas fa-phone me-2"></i>(02692) 266679</a>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="text-white-50"><i class="fas fa-clock me-2"></i>Last Updated: Jun 7, 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/cesLogo.png" alt="DN Institute Logo" />
+          <div class="logo-text">
+            <span>D N Institute of Computer Applications</span>
+            <p>DNICA</p>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#aboutUs" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item has-submenu" href="#">Department</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="bca.html">BCA</a></li>
+                    <li><a class="dropdown-item" href="bscIT.html">BSc CA & IT</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+              </ul>
+            </li>
+
+            <!-- Student Corner Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
+                Student Corner
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="studentDropdown">
+                <li><a class="dropdown-item" href="Alumni.html">Alumni</a></li>
+                <li><a class="dropdown-item" href="Results.html">Results</a></li>
+                <li><a class="dropdown-item" href="Syllabus.html">Syllabus</a></li>
+                <li><a class="dropdown-item" href="Placement-Cell.html">Placement Cell</a></li>
+                <li><a class="dropdown-item" href="Admission.html">Admission Open</a></li>
+                <li><a class="dropdown-item" href="FormsAndFormat.html">Form & Formats</a></li>
+                <li><a class="dropdown-item" href="Academic.html">Academic Calendar</a></li>
+                <li><a class="dropdown-item" href="OldQuestionPapers.html">Old Question Papers</a></li>
+                <li><a class="dropdown-item" href="Scholarships.html">Scholarship For Students</a></li>
+              </ul>
+            </li>
+
+            <!-- Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown">
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li><a class="dropdown-item" href="co-curricular.html">Co-curricular Activities</a></li>
+                <li><a class="dropdown-item" href="extra-curricular.html">Extra-Curricular Activities</a></li>
+                <li><a class="dropdown-item" href="additional-activities.html">Additional Activities</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="search-box">
+            <form action="#">
+              <input class="form-control" type="search" placeholder="Search..." />
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-pattern"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="hero-content" data-aos="fade-right">
+              <h1>Shri D N Institute of Computer Applications</h1>
+              <p>Excellence in Computer Education Since 2011</p>
+              <a href="#aboutUs" class="btn hero-btn">Explore Programs <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="aboutUs">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title" data-aos="fade-up">About Us</h2>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="images/School.jpg" class="img-fluid about-img" alt="DN Institute" />
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="about-content">
+              <h3>Shri D N Institute of Computer Applications</h3>
+              <p>
+                Shri Dadabhai Naoroji Institute of Computer Application, Anand,
+                formally known as Shri D N Institute of Computer Application
+                (DNICA), was established in April 2011. It is affiliated with
+                Sardar Patel University, Vallabh Vidyanagar, and managed by
+                Charotar Education Society, Anand.
+              </p>
+              <p>
+                The society was founded on 16th April 1916 by the visionary Shri
+                Motibhai Amin Saheb to advance higher education in the Charotar
+                Pradesh, the region between the Mahi and Vatrak rivers, extending
+                from Vasad to Kheda.
+              </p>
+              <a href="#" class="btn btn-primary">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h4>Quality Education</h4>
+              <p>Providing industry-relevant computer education with modern curriculum and practical training.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h4>Modern Facilities</h4>
+              <p>State-of-the-art computer labs and infrastructure to support hands-on learning.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h4>Experienced Faculty</h4>
+              <p>Dedicated and qualified faculty members with industry and academic experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principal Section -->
+    <section class="section principal-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row">
+              <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="principal-card">
+                  <img src="images/vc.jpg" class="principal-img" alt="Principal" />
+                  <div class="principal-content">
+                    <h3 class="principal-title">Message From Principal's Desk</h3>
+                    <span class="principal-label">Dr. Maulik Pandya - Principal</span>
+                    <p>What is education? Children's minds and bodies are being developed healthily. I think that computers are smart tools for rapid development, and I firmly believe this. The benefits will be discussed.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left">
+                <div class="principal-card h-100">
+                  <div class="principal-content">
+                    <p>Thanks to computers and the internet, you have access to all kinds of information. In other words, the entire world is just a click away, and it's easy to access any information, idea, or thought. You are aware that education is now more advanced than it was with just books thanks to computers.</p>
+                    <p>Remember the bygone era when you had to flip through entire books to find the smallest of details? Currently, you can increase your knowledge by giving computers a few keywords. The computer is a repository for all available data on everything in one place.</p>
+                    <p>Our institute is committed to providing students with the latest technological tools and knowledge to prepare them for the digital future. We focus on both theoretical knowledge and practical skills to ensure our graduates are industry-ready.</p>
+                    <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section quick-links-section bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title" data-aos="fade-up">Quick Links</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <a href="FormsAndFormat.html" class="text-decoration-none">
+              <div class="quick-link-card">
+                <div class="quick-link-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <h5>Forms</h5>
+                <p>Download important forms and documents</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="Results.html" class="text-decoration-none">
+              <div class="quick-link-card">
+                <div class="quick-link-icon">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <h5>Results</h5>
+                <p>Check your examination results</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="Syllabus.html" class="text-decoration-none">
+              <div class="quick-link-card">
+                <div class="quick-link-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <h5>Syllabus</h5>
+                <p>Course syllabus and curriculum</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="Placement-Cell.html" class="text-decoration-none">
+              <div class="quick-link-card">
+                <div class="quick-link-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h5>Placements</h5>
+                <p>Career opportunities and placements</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="section departments-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title" data-aos="fade-up">Our Departments</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- BCA -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="department-card">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="department-img" alt="BCA" />
+              <div class="department-body">
+                <h5 class="department-title">BCA</h5>
+                <p class="department-text">Cutting-edge programs in computer science fundamentals and applications.</p>
+                <a href="bca.html" class="btn btn-primary btn-sm">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BSc CA & IT -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="department-card">
+              <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="department-img" alt="BSc CA & IT" />
+              <div class="department-body">
+                <h5 class="department-title">BSc CA & IT</h5>
+                <p class="department-text">Innovative IT programs preparing students for the digital future.</p>
+                <a href="bscIT.html" class="btn btn-primary btn-sm">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADMIN -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="department-card">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="department-img" alt="Admin" />
+              <div class="department-body">
+                <h5 class="department-title">ADMIN</h5>
+                <p class="department-text">Comprehensive administrative support for all academic activities.</p>
+                <a href="#" class="btn btn-primary btn-sm">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter -->
+    <section class="counter-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="counter-item">
+              <div class="counter-number">284+</div>
+              <div class="counter-text">Finished Sessions</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="counter-item">
+              <div class="counter-number">4523+</div>
+              <div class="counter-text">Enrolled Learners</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="counter-item">
+              <div class="counter-number">120+</div>
+              <div class="counter-text">Online Instructors</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="counter-item">
+              <div class="counter-number">100%</div>
+              <div class="counter-text">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+            <h5 class="footer-title">Explore</h5>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Home</a></li>
+              <li><a href="#aboutUs"><i class="fas fa-chevron-right me-2"></i>About</a></li>
+              <li><a href="gallery.html"><i class="fas fa-chevron-right me-2"></i>Gallery</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+            <h5 class="footer-title">Campus List</h5>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Anand Campus</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Khetiwadi Campus</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Mogri Campus</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+            <h5 class="footer-title">Social Media</h5>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/cesociety" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/ces100anand" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/cesociety_1916/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/82105326/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="mt-4">
+              <h5 class="footer-title">Newsletter</h5>
+              <form class="mt-3">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Your Email">
+                  <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="400">
+            <h5 class="footer-title">Address</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  M.B.Patel Science College Campus, Behind D.N.High School, Near Sardar Gunj, Anand, Gujarat 3880
+                </a>
+              </li>
+              <li><a href="tel:+912692266679"><i class="fas fa-phone me-2"></i>(02692) 266679</a></li>
+              <li><a href="mailto:mbpas@outlook.com"><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">&copy; 2025 All Rights Reserved By Charotar Education Society.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <span>Developed By <a href="https://bhavu7.github.io/BhavuVerse/" target="_blank" class="developer-link">Bhavesh Bhoi</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" data-aos="fade-up"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    </script>
+  </body>
+</html>

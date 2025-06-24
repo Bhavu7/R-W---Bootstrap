@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Open - D N Institute of Computer Applications</title>
+    <link rel="shortcut icon" href="images/cesLogo.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar" data-aos="fade-down">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="mailto:dnica@cesociety.in"
+              ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+            >
+            <a href="tel:02692266679" class="ms-3"
+              ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+            >
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="text-white-50"
+              ><i class="fas fa-clock me-2"></i>Last Updated: Jun 7, 2025</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div
+            class="d-flex align-items-center"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="images/cesLogo.png" alt="DN Institute Logo" />
+            <div>
+              <span>D N Institute of Computer Applications</span>
+              <p>DNICA</p>
+            </div>
+          </div>
+        </a>
+        <button
+          title="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3" data-aos="zoom-in-down">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#aboutUs"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item has-submenu" href="#">Department</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="bca.html">BCA</a></li>
+                    <li>
+                      <a class="dropdown-item" href="bscIT.html">BSc CA & IT</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="gallery.html">Gallery</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+              </ul>
+            </li>
+
+            <!-- Student Corner Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="studentDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Student Corner
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="studentDropdown">
+                <li><a class="dropdown-item" href="Alumni.html">Alumni</a></li>
+                <li>
+                  <a class="dropdown-item" href="Results.html">Results</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Syllabus.html">Syllabus</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Placement-Cell.html"
+                    >Placement Cell</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Admission.html"
+                    >Admission Open</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="FormsAndFormat.html"
+                    >Form & Formats</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Academic.html"
+                    >Academic Calendar</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="OldQuestionPapers.html"
+                    >Old Question Papers</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Scholarships.html"
+                    >Scholarship For Students</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="activitiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li>
+                  <a class="dropdown-item" href="co-curricular.html"
+                    >Co-curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="extra-curricular.html"
+                    >Extra-Curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="additional-activities.html"
+                    >Additional Activities</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div
+            class="search-box"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <form action="#">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search..."
+              />
+              <button title="Search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section admission-hero"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div class="hero-content text-center">
+        <h1 data-aos="fade-up" data-aos-duration="1000">Admission Open 2025</h1>
+        <p data-aos="fade-up" data-aos-duration="1200">
+          Join DNICA for a bright future in computer applications
+        </p>
+        <a
+          href="#application-form"
+          class="btn hero-btn"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+        >
+          Apply Now <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Admission Overview -->
+    <section class="admission-overview py-5">
+      <div class="container">
+        <h2
+          class="section-title text-center mb-5"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Admission Process
+        </h2>
+        <div class="row align-items-center">
+          <div
+            class="col-lg-6 mb-4 mb-lg-0"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src="images/admission-img.jpg"
+              class="img-fluid about-img"
+              alt="Admission Process"
+            />
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <p>
+              At DNICA, we offer a streamlined admission process to help you
+              join our esteemed BCA and BSc CA & IT programs. Admissions are
+              open for the 2025 academic year, and we welcome students who are
+              passionate about pursuing a career in technology.
+            </p>
+            <p>
+              Our process includes eligibility checks, submission of required
+              documents, and an entrance test (if applicable). We provide
+              guidance at every step to ensure a smooth application experience.
+            </p>
+            <a href="#application-form" class="btn read-more-btn"
+              >Start Application <i class="fas fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Details -->
+    <section class="program-details py-5 bg-light">
+      <div class="container">
+        <h2
+          class="section-title text-center mb-5"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Our Programs
+        </h2>
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="card program-card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  BCA (Bachelor of Computer Applications)
+                </h5>
+                <p class="card-text">
+                  A 3-year undergraduate program focusing on computer science
+                  fundamentals, programming, and software development.
+                </p>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check-circle me-2 text-primary"></i
+                    >Eligibility: 10+2 with minimum 50% marks
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2 text-primary"></i
+                    >Duration: 3 Years
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2 text-primary"></i>Intake:
+                    120 seats
+                  </li>
+                </ul>
+                <a
+                  href="documents/bca_brochure.pdf"
+                  class="btn btn-sm hero-btn"
+                  target="_blank"
+                >
+                  Download Brochure <i class="fas fa-download ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="card program-card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Bachelor of Science (CA & IT)
+                </h5>
+                <p class="card-text">
+                  A 3-year undergraduate program designed to prepare students
+                  for the IT industry with a focus on emerging technologies.
+                </p>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check-circle me-2 text-primary"></i
+                    >Eligibility: 10+2 with minimum 50% marks
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2 text-primary"></i
+                    >Duration: 3 Years
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2 text-primary"></i>Intake:
+                    60 seats
+                  </li>
+                </ul>
+                <a
+                  href="documents/bscit_brochure.pdf"
+                  class="btn btn-sm hero-btn"
+                  target="_blank"
+                >
+                  Download Brochure <i class="fas fa-download ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <!-- <section class="application-form py-5" id="application-form">
+      <div class="container">
+        <h2
+          class="section-title text-center mb-5"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Apply Now
+        </h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form
+              action="#"
+              class="application-form-container"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="program" class="form-label">Program</label>
+                <select class="form-select" id="program" required>
+                  <option value="" disabled selected>
+                    Select your program
+                  </option>
+                  <option value="BCA">BCA</option>
+                  <option value="BSc CA & IT">BSc CA & IT</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label"
+                  >Additional Information</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Any additional details or queries"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn hero-btn w-100">
+                Submit Application <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- FAQs -->
+    <section class="faqs-section py-5 bg-light">
+      <div class="container">
+        <h2
+          class="section-title text-center mb-5"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Frequently Asked Questions
+        </h2>
+        <div
+          class="accordion"
+          id="admissionFaqs"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                aria-expanded="true"
+                aria-controls="collapse1"
+              >
+                What are the eligibility criteria for admission?
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse show"
+              aria-labelledby="faq1"
+              data-bs-parent="#admissionFaqs"
+            >
+              <div class="accordion-body">
+                Candidates must have completed 10+2 with a minimum of 50% marks
+                from a recognized board. Specific requirements may vary by
+                program.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                aria-expanded="false"
+                aria-controls="collapse2"
+              >
+                What is the application process?
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq2"
+              data-bs-parent="#admissionFaqs"
+            >
+              <div class="accordion-body">
+                Submit the online application form, upload required documents,
+                and pay the application fee. Shortlisted candidates may need to
+                appear for an entrance test or interview.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+                aria-expanded="false"
+                aria-controls="collapse3"
+              >
+                Are scholarships available?
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq3"
+              data-bs-parent="#admissionFaqs"
+            >
+              <div class="accordion-body">
+                Yes, DNICA offers merit-based and need-based scholarships. Visit
+                the Scholarships section for more details.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Explore
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"><i class="fas fa-chevron-right me-2"></i>Home</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#aboutUs"
+                  ><i class="fas fa-chevron-right me-2"></i>About</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="gallery.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Gallery</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Campus List
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Anand Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Khetiwadi Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Mogri Campus</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Social Media
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a
+                  rel="noopener"
+                  href="https://www.facebook.com/cesociety"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f me-2"></i>Facebook</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a
+                  rel="noopener"
+                  href="https://x.com/ces100anand"
+                  target="_blank"
+                  ><i class="fab fa-twitter me-2"></i>Twitter</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a
+                  rel="noopener"
+                  href="https://www.instagram.com/cesociety_1916/"
+                  target="_blank"
+                  ><i class="fab fa-instagram me-2"></i>Instagram</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a
+                  rel="noopener"
+                  href="https://www.linkedin.com/company/82105326/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in me-2"></i>LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Address
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  M.B.Patel Science College Campus, Behind D.N.High School, Near
+                  Sardar Gunj, Anand, Gujarat 3880
+                </a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="tel:+912692266679"
+                  ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="mailto:mbpas@outlook.com"
+                  ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">
+                &copy; 2025 All Rights Reserved By Charotar Education Society.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <span
+                >Developed By
+                <a
+                  rel="noopener noreferrer"
+                  href="https://bhavu7.github.io/BhavuVerse/"
+                  target="_blank"
+                  class="developer-link"
+                  >Bhavesh Bhoi</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

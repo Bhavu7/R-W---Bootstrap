@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infrastructure - D N Institute of Computer Applications</title>
+    <link rel="shortcut icon" href="images/cesLogo.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar" data-aos="fade-down">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="mailto:dnica@cesociety.in"
+              ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+            >
+            <a href="tel:02692266679" class="ms-3"
+              ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+            >
+          </div>
+          <div class="col-md-6 text-md-end">
+            <span class="text-white-50"
+              ><i class="fas fa-clock me-2"></i>Last Updated: Jun 7, 2025</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div
+            class="d-flex align-items-center"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="images\cesLogo.png" alt="DN Institute Logo" />
+            <div>
+              <span>D N Institute of Computer Applications</span>
+              <p>DNICA</p>
+            </div>
+          </div>
+        </a>
+        <button
+          title="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3" data-aos="zoom-in-down">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#aboutUs"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item has-submenu" href="#">Department</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="bca.html">BCA</a></li>
+                    <li>
+                      <a class="dropdown-item" href="bscIT.html">BSc CA & IT</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="gallery.html">Gallery</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+              </ul>
+            </li>
+
+            <!-- Student Corner Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="studentDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Student Corner
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="studentDropdown">
+                <li><a class="dropdown-item" href="Alumni.html">Alumni</a></li>
+                <li>
+                  <a class="dropdown-item" href="Results.html">Results</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Syllabus.html">Syllabus</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Placement-Cell.html"
+                    >Placement Cell</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Admission.html"
+                    >Admission Open</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="FormsAndFormat.html"
+                    >Form & Formats</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Academic.html"
+                    >Academic Calendar</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="OldQuestionPapers.html"
+                    >Old Question Papers</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Scholarships.html"
+                    >Scholarship For Students</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Activities Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="activitiesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Activities
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                <li>
+                  <a class="dropdown-item" href="co-curricular.html"
+                    >Co-curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="extra-curricular.html"
+                    >Extra-Curricular Activities</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="additional-activities.html"
+                    >Additional Activities</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div
+            class="search-box"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <form action="#">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search..."
+              />
+              <button title="Search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Infrastructure Section -->
+    <section class="infrastructure-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Our Infrastructure</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="infrastructure-card">
+              <img
+                src="https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww"
+                class="img-fluid"
+                alt="Computer Lab"
+              />
+              <div class="infrastructure-content">
+                <h5>Computer Labs</h5>
+                <p>
+                  State-of-the-art computer labs equipped with the latest
+                  hardware and software for hands-on learning.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="infrastructure-card">
+              <img
+                src="https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww"
+                class="img-fluid"
+                alt="Library"
+              />
+              <div class="infrastructure-content">
+                <h5>Library</h5>
+                <p>
+                  A well-stocked library with books, journals, and digital
+                  resources to support academic and research needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="infrastructure-card">
+              <img
+                src="https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww"
+                class="img-fluid"
+                alt="Seminar Hall"
+              />
+              <div class="infrastructure-content">
+                <h5>Seminar Hall</h5>
+                <p>
+                  Modern seminar halls for workshops, guest lectures, and
+                  presentations with advanced audio-visual facilities.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="infrastructure-card">
+              <img
+                src="https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww"
+                class="img-fluid"
+                alt="Classrooms"
+              />
+              <div class="infrastructure-content">
+                <h5>Classrooms</h5>
+                <p>
+                  Modern seminar halls for workshops, guest lectures, and
+                  presentations with advanced audio-visual facilities.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="infrastructure-card">
+              <img
+                src="https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww"
+                class="img-fluid"
+                alt="Sports Facilities"
+              />
+              <div class="infrastructure-content">
+                <h5>Sports Facilities</h5>
+                <p>
+                  Modern seminar halls for workshops, guest lectures, and
+                  presentations with advanced audio-visual facilities.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="infrastructure-card">
+              <img
+                src="https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww"
+                class="img-fluid"
+                alt="Canteen"
+              />
+              <div class="infrastructure-content">
+                <h5>Canteen</h5>
+                <p>
+                  Modern seminar halls for workshops, guest lectures, and
+                  presentations with advanced audio-visual facilities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Explore
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"><i class="fas fa-chevron-right me-2"></i>Home</a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#aboutUs"
+                  ><i class="fas fa-chevron-right me-2"></i>About</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="gallery.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Gallery</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right me-2"></i>Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Campus List
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Anand Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Khetiwadi Campus</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="#"
+                  ><i class="fas fa-chevron-right me-2"></i>Mogri Campus</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Social Media
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a
+                  rel="noopener"
+                  href="https://www.facebook.com/cesociety"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f me-2"></i>Facebook</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a
+                  rel="noopener"
+                  href="https://x.com/ces100anand"
+                  target="_blank"
+                  ><i class="fab fa-twitter me-2"></i>Twitter</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a
+                  rel="noopener"
+                  href="https://www.instagram.com/cesociety_1916/"
+                  target="_blank"
+                  ><i class="fab fa-instagram me-2"></i>Instagram</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1300">
+                <a
+                  rel="noopener"
+                  href="https://www.linkedin.com/company/82105326/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in me-2"></i>LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h5 class="footer-title" data-aos="fade-up" data-aos-duration="800">
+              Address
+            </h5>
+            <ul class="footer-links">
+              <li data-aos="fade-up" data-aos-duration="1000">
+                <a href="#">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  M.B.Patel Science College Campus, Behind D.N.High School, Near
+                  Sardar Gunj, Anand, Gujarat 3880
+                </a>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1100">
+                <a href="tel:+912692266679"
+                  ><i class="fas fa-phone me-2"></i>(02692) 266679</a
+                >
+              </li>
+              <li data-aos="fade-up" data-aos-duration="1200">
+                <a href="mailto:mbpas@outlook.com"
+                  ><i class="fas fa-envelope me-2"></i>dnica@cesociety.in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="mb-0">
+                &copy; 2025 All Rights Reserved By Charotar Education Society.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <span
+                >Developed By
+                <a
+                  rel="noopener noreferrer"
+                  href="https://bhavu7.github.io/BhavuVerse/"
+                  target="_blank"
+                  class="developer-link"
+                  >Bhavesh Bhoi</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

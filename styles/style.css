@@ -1,0 +1,2398 @@
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --accent-color: #3b82f6;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --text-color: #333;
+        --text-light: #6c757d;
+        --gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        /* font-family: "Playfair Display", serif; */
+        font-weight: 600;
+      }
+
+      /* Header Styles */
+      .top-bar {
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+      }
+
+      .top-bar a {
+        color: var(--light-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .top-bar a:hover {
+        color: var(--text-light);
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-brand img {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .navbar-brand span {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        line-height: 1.2;
+      }
+
+      .navbar-brand p {
+        /* font-size: 0.8rem;
+          color: var(--text-light);
+          margin: 0;
+          font-weight: 500; */
+        display: none;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        color: var(--dark-color);
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color);
+        background-color: #2564eb15;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+      }
+
+      .search-box {
+        position: relative;
+        max-width: 300px;
+        margin-left: auto;
+      }
+
+      .search-box input {
+        padding-right: 40px;
+        border-radius: 20px;
+        border: 1px solid var(--primary-color);
+      }
+
+      .search-box input:focus {
+        border-color: var(--primary-color);
+      }
+
+      .search-box button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--primary-color);
+      }
+
+      /* Dropdown Styles */
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 0.5rem;
+        width: 250px;
+      }
+
+      .dropdown-item {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        position: relative;
+        transition: 0.2s ease-in-out;
+      }
+
+      .dropdown-item:hover {
+        background-color: #2564eb15;
+        color: var(--primary-color);
+        -webkit-transition: 0.2s ease-in-out;
+        -moz-transition: 0.2s ease-in-out;
+        -ms-transition: 0.2s ease-in-out;
+        -o-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+      }
+
+      .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+      }
+
+      /* Nested Dropdowns */
+      .dropdown-menu .dropdown-menu {
+        left: 97%;
+        top: 0;
+        width: 200px;
+      }
+
+      .dropdown-item.has-submenu::after {
+        content: "\f054";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 1rem;
+        font-size: 0.7rem;
+        margin-top: 5px;
+      }
+
+      /* Show the submenu on hover */
+      .dropdown-submenu:hover>.dropdown-menu {
+        display: block;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        height: 80vh;
+        min-height: 500px;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: var(--light-color);
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-btn {
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .hero-btn:hover {
+        background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .about-img {
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .section-title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-color);
+      }
+
+      /* .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--secondary-color);
+      } */
+
+      .about-content h3 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        margin-left: 20px;
+      }
+
+      .about-content p {
+        color: var(--text-color);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        margin-left: 20px;
+      }
+
+      .read-more-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: 1px solid var(--primary-color);
+        padding: 0.8rem 2rem;
+        border-radius: 30px;
+        font-weight: 500;
+        margin-left: 20px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .read-more-btn:hover {
+        background-color: var(--light-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        border: 1px solid var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease-in-out;
+      }
+
+      /* Principal Section */
+      .principal-section {
+        padding: 5rem 0;
+        background-color: white;
+      }
+
+      .principal-section .row p {
+        text-align: justify;
+      }
+
+      .principal-card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .principal-img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .principal-title {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .principal-label {
+        color: var(--secondary-color);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Quick Links */
+      .quick-links-section {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .quick-link-card {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .quick-link-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .quick-link-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      /* Departments */
+      .departments-section {
+        padding: 5rem 0;
+      }
+
+      .department-card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+
+      .department-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .department-img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .department-body {
+        padding: 1.5rem;
+      }
+
+      .department-title {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      /* Counter */
+      .counter-section {
+        padding: 4rem 0;
+        background-color: var(--light-color);
+        color: var(--primary-color);
+      }
+
+      .counter-item {
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .counter-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .counter-text {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: white;
+        color: var(--primary-color);
+        padding: 4rem 0 2rem;
+      }
+
+      .footer-title {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary-color);
+        padding-left: 5px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        margin-top: 3rem;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      .developer-link {
+        color: var(--text-color);
+        text-decoration: underline;
+        padding: 5px 7px;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -ms-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+}
+
+      .developer-link:hover {
+                background-color: #2564eb15;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+                -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -ms-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        color: var(--primary-color);
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 991.98px) {
+        .dropdown-menu {
+          width: 100%;
+          box-shadow: none;
+        }
+
+        .navbar-brand {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .navbar-brand p {
+          margin-left: 15px;
+          font-size: 0.9rem;
+        }
+
+        .search-box {
+          max-width: 100%;
+          margin: 1rem 0;
+        }
+
+        /* Stack dropdowns vertically on mobile */
+        /* .dropdown-menu .dropdown-menu {
+              position: static;
+              margin-left: 1rem;
+              margin-top: 0.5rem;
+              box-shadow: none;
+              border-left: 2px solid var(--primary-color);
+          } */
+
+        .dropdown-item.has-submenu::after {
+          content: "\f078";
+        }
+      }
+
+      @media (min-width:320px) and (max-width:425px) {
+        .quick-link-card {
+          background: white;
+          border-radius: 10px;
+          padding: 1rem;
+          text-align: left;
+        }
+
+        .quick-link-icon {
+          font-size: 2.5rem;
+        }
+
+        .quick-link-card p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width:768px) {
+        .quick-link-card {
+          padding: 1.75rem;
+          text-align: left;
+        }
+
+        .quick-link-icon {
+          font-size: 2.5rem;
+        }
+
+        .department-body {
+          text-align: left;
+        }
+      }
+
+      /* Infrastructure Section */
+      .infrastructure-section {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .infrastructure-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .infrastructure-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .infrastructure-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .infrastructure-content {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .infrastructure-content h5 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .infrastructure-content p {
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      /* Gallery Section */
+      .gallery-section {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .gallery-card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .gallery-card .card-body {
+        padding: 1.5rem;
+      }
+
+      .gallery-card .card-title {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      /* Contact Hero Section */
+      .contact-hero-section {
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1595290429614-88ba93221dba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww');
+        background-size: cover;
+        background-position: center;
+        padding: 6rem 0;
+        text-align: center;
+        color: var(--light-color);
+      }
+
+      .contact-hero-section .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+      }
+
+      .contact-hero-section .hero-content p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Contact Form and Info Section */
+      .contact-section {
+        padding: 5rem 0;
+      }
+
+      .contact-form-container,
+      .contact-info-container {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .contact-input {
+        border-radius: 8px;
+        border: 1px solid var(--primary-color);
+        transition: all 0.3s ease;
+      }
+
+      .contact-input:focus {
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 5px rgba(var(--secondary-color-rgb), 0.5);
+      }
+
+      .contact-info li {
+        font-size: 1.1rem;
+        color: var(--text-color);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-info i {
+        color: var(--primary-color) !important;
+        font-size: larger;
+      }
+
+      .contact-info a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: var(--primary-color);
+      }
+
+      .social-icons a {
+        color: var(--text-color);
+        font-size: larger;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      /* Map Section */
+      .map-section {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .map-container {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .contact-hero-section .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .contact-hero-section .hero-content p {
+          font-size: 1.1rem;
+        }
+
+        .contact-section {
+          padding: 3rem 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .contact-hero-section {
+          padding: 4rem 0;
+        }
+
+        .contact-form-container,
+        .contact-info-container {
+          margin-bottom: 2rem;
+        }
+
+        .map-container iframe {
+          height: 350px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .contact-hero-section .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .contact-hero-section .hero-content p {
+          font-size: 1rem;
+        }
+
+        .contact-info li {
+          font-size: 1rem;
+        }
+
+        .social-icons a {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+          display: block;
+        }
+
+        .dropdown-menu .dropdown:hover>.dropdown-menu {
+          display: block;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .top-bar {
+          display: none;
+          /* Hide the top bar on smaller screens */
+        }
+
+        .hero-section {
+          height: 60vh;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .navbar-brand span {
+          font-size: 1.1rem;
+        }
+
+        .about-section,
+        .principal-section,
+        .quick-links-section,
+        .departments-section {
+          padding: 3rem 0;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .navbar {
+          padding: 0.5rem 0;
+        }
+
+        .navbar span {
+          display: none;
+          /* Hide the span in the navbar */
+        }
+
+        .navbar p {
+          display: block;
+          font-size: 1.5rem;
+          margin-top: 1rem;
+          font-weight: 600;
+          color: var(--primary-color);
+        }
+
+        .hero-section {
+          height: 50vh;
+        }
+
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .counter-number {
+          font-size: 2rem;
+        }
+
+        .footer {
+          text-align: left;
+          padding-left: 0.5rem;
+          padding-top: 3rem;
+          padding-right: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .footer-links {
+          margin-bottom: 1rem;
+        }
+
+        .footer-bottom {
+          margin-top: 0;
+        }
+
+        .footer-bottom p {
+          font-size: 0.7rem;
+        }
+
+        .footer-bottom span {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Activities Hero Section */
+      .activities-hero-section {
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/8813507/pexels-photo-8813507.jpeg?auto=compress&cs=tinysrgb&w=600');
+        background-size: cover;
+        background-position: center;
+        padding: 6rem 0;
+        text-align: center;
+        color: var(--light-color);
+      }
+
+      .activities-hero-section .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+      }
+
+      .activities-hero-section .hero-content p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Activities Section */
+      .activities-section {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .activities-card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .activities-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .activities-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .activities-card .card-body {
+        padding: 1.5rem;
+      }
+
+      .activities-card .card-title {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .activities-card i {
+        color: var(--primary-color) !important;
+        font-size: x-large;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .activities-hero-section .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .activities-hero-section .hero-content p {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .activities-hero-section {
+          padding: 4rem 0;
+        }
+
+        .activities-section {
+          padding: 3rem 0;
+        }
+
+        .activities-card img {
+          height: 180px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .activities-hero-section .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .activities-hero-section .hero-content p {
+          font-size: 1rem;
+        }
+
+        .activities-card i {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Alumni Hero Section */
+      .alumni-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://www.higher-education-marketing.com/wp-content/uploads/2025/03/The-Power-of-Alumni-Networks-Featuring-Graduate-Success-Stories-in-Your-Marketing-Strategy.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .alumni-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .alumni-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Alumni Introduction */
+      .alumni-intro .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .alumni-intro p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Notable Alumni */
+      .alumni-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .alumni-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .alumni-img {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .alumni-card .card-body {
+        padding: 1.5rem;
+      }
+
+      .alumni-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .alumni-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      /* Testimonials */
+      .testimonial-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      .testimonial-card .card-body {
+        padding: 2rem;
+      }
+
+      .testimonial-card .card-text {
+        font-style: italic;
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .testimonial-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+      }
+
+      .testimonial-card .card-subtitle {
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Alumni Form */
+      .alumni-form-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .alumni-form-container .form-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      .alumni-form-container .form-control,
+      .alumni-form-container .form-select {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+      }
+
+      .alumni-form-container .form-control:focus,
+      .alumni-form-container .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .alumni-form-container .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .alumni-form-container .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .alumni-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .alumni-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .alumni-img {
+          height: 150px;
+        }
+      }
+
+      /* Results Hero Section */
+      .results-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cache.careers360.mobi/media/article_images/2025/4/24/KEE_Result_2025.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .results-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .results-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Results Filter Form */
+      .results-form-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .results-form-container .form-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      .results-form-container .form-select {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+      }
+
+      .results-form-container .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .results-form-container .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .results-form-container .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Results Table */
+      .results-table .table {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .results-table .table th {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .results-table .table td {
+        vertical-align: middle;
+      }
+
+      .results-table .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .results-table .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Download Cards */
+      .download-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .download-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .download-card .card-body {
+        padding: 2rem;
+      }
+
+      .download-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .download-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .download-card .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .download-card .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .results-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .results-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .results-form-container {
+          padding: 1.5rem;
+        }
+
+        .results-table .table {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Syllabus Hero Section */
+      .syllabus-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://s45271.pcdn.co/wp-content/uploads/elementor/thumbs/01.27_the-syllabus_an-annotated-bibliography-ok204d7vpnj23eghlsivmkysl9urkdfmvuh1fc2ixw.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .syllabus-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .syllabus-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Syllabus Filter Form */
+      .syllabus-form-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .syllabus-form-container .form-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      .syllabus-form-container .form-select {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+      }
+
+      .syllabus-form-container .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .syllabus-form-container .hero-btn {
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .syllabus-form-container .hero-btn:hover {
+               background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* Syllabus Table */
+      .syllabus-table .table {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .syllabus-table .table th {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .syllabus-table .table td {
+        vertical-align: middle;
+      }
+
+      .syllabus-table .hero-btn {
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .syllabus-table .hero-btn:hover {
+        background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* Resource Cards */
+      .resource-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .resource-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .resource-card .card-body {
+        padding: 2rem;
+      }
+
+      .resource-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .resource-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .resource-card .hero-btn {
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .resource-card .hero-btn:hover {
+        background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .syllabus-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .syllabus-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .syllabus-form-container {
+          padding: 1.5rem;
+        }
+
+        .syllabus-table .table {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Placement Hero Section */
+      .placement-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://vtu.ac.in/wp-content/uploads/2020/01/PLACEMENT1.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .placement-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .placement-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Placement Overview */
+      .placement-overview .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .placement-overview p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Recruiters Section */
+      .recruiter-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .recruiter-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .recruiter-logo {
+        max-height: 80px;
+        object-fit: contain;
+      }
+
+      /* Statistics Section */
+      .stat-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-number {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #007bff;
+      }
+
+      .stat-text {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      /* Testimonials */
+      .testimonial-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      .testimonial-card .card-body {
+        padding: 2rem;
+      }
+
+      .testimonial-card .card-text {
+        font-style: italic;
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .testimonial-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+      }
+
+      .testimonial-card .card-subtitle {
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Contact Form */
+      .contact-form-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form-container .form-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      .contact-form-container .form-control,
+      .contact-form-container .form-select {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+      }
+
+      .contact-form-container .form-control:focus,
+      .contact-form-container .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .contact-form-container .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form-container .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .placement-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .placement-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .recruiter-logo {
+          max-height: 60px;
+        }
+
+        .stat-number {
+          font-size: 1.5rem;
+        }
+
+        .contact-form-container {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Admission Hero Section */
+      .admission-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://www.csit.edu.in/wp-content/uploads/2025/03/CSIT-ADMISSION-BANNER.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .admission-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .admission-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Admission Overview */
+      .admission-overview .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .admission-overview p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Program Cards */
+      .program-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .program-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .program-card .card-body {
+        padding: 2rem;
+      }
+
+      .program-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .program-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .program-card .hero-btn {
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .program-card .hero-btn:hover {
+        background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* Application Form */
+      .application-form-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .application-form-container .form-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      .application-form-container .form-control,
+      .application-form-container .form-select {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+
+      .application-form-container .form-control:focus,
+      .application-form-container .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .application-form-container .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .application-form-container .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* FAQs Section */
+      .faqs-section .accordion-item {
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .faqs-section .accordion-button {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .faqs-section .accordion-button:not(.collapsed) {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .faqs-section .accordion-body {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .admission-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .admission-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .application-form-container {
+          padding: 1.5rem;
+        }
+
+        .program-card .card-body {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Forms Hero Section */
+      .forms-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.neowin.com/news/images/uploaded/2018/04/1525107123_tc-img-grid-forms_story.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .forms-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .forms-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Forms Overview */
+      .forms-overview .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .forms-overview p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Forms Section */
+      .forms-section .accordion-item {
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .forms-section .accordion-button {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .forms-section .accordion-button:not(.collapsed) {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .forms-section .list-group-item {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .forms-section .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .forms-section .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Contact Section */
+      .forms-contact .contact-info p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .forms-contact .contact-info ul li {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .forms-contact .contact-info ul li a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .forms-contact .contact-info ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .forms-contact .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .forms-contact .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .forms-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .forms-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .forms-overview .about-img {
+          margin-bottom: 1.5rem;
+        }
+
+        .forms-section .accordion-button {
+          font-size: 1rem;
+        }
+
+        .forms-section .list-group-item {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Calendar Hero Section */
+      .calendar-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://ksbed.ac.in/wp-content/uploads/2024/09/image-1.png') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .calendar-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .calendar-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Calendar Overview */
+      .calendar-overview .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .calendar-overview p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Calendar Section */
+      .calendar-section .table {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .calendar-section .table th {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .calendar-section .table td {
+        vertical-align: middle;
+      }
+
+      .calendar-section .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+      }
+
+      .calendar-section .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Key Events Section */
+      .event-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .event-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .event-card .card-body {
+        padding: 2rem;
+      }
+
+      .event-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .event-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      /* Contact Section */
+      .calendar-contact .contact-info p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .calendar-contact .contact-info ul li {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .calendar-contact .contact-info ul li a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .calendar-contact .contact-info ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .calendar-contact .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .calendar-contact .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .calendar-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .calendar-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .calendar-overview .about-img {
+          margin-bottom: 1.5rem;
+        }
+
+        .calendar-section .table {
+          font-size: 0.9rem;
+        }
+
+        .event-card .card-body {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Question Papers Hero Section */
+      .question-papers-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://onlinefreenotes.com/wp-content/uploads/2020/12/question-papers-NBSE-SEBA-1024x536.png') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .question-papers-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .question-papers-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Papers Overview */
+      .papers-overview .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .papers-overview p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Papers Section */
+      .papers-section .accordion-item {
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .papers-section .accordion-button {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .papers-section .accordion-button:not(.collapsed) {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .papers-section .list-group-item {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .papers-section .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .papers-section .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Contact Section */
+      .papers-contact .contact-info p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .papers-contact .contact-info ul li {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .papers-contact .contact-info ul li a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .papers-contact .contact-info ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .papers-contact .hero-btn {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .papers-contact .hero-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .question-papers-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .question-papers-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .papers-overview .about-img {
+          margin-bottom: 1.5rem;
+        }
+
+        .papers-section .accordion-button {
+          font-size: 1rem;
+        }
+
+        .papers-section .list-group-item {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Scholarships Hero Section */
+      .scholarships-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://execed.utdallas.edu/files/2024/05/scholarship-hero-600-400-baaa8932fb4790e9.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .scholarships-hero .hero-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .scholarships-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Scholarships Overview */
+      .scholarships-overview .about-img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .scholarships-overview p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Scholarships Section */
+      .scholarship-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .scholarship-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .scholarship-card .card-body {
+        padding: 2rem;
+      }
+
+      .scholarship-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .scholarship-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .scholarship-card .hero-btn {
+                background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .scholarship-card .hero-btn:hover {
+                background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* Application Process Section */
+      .process-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .process-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .process-card .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .process-card .card-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      /* Contact Section */
+      .scholarships-contact .contact-info p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .scholarships-contact .contact-info ul li {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .scholarships-contact .contact-info ul li a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .scholarships-contact .contact-info ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .scholarships-contact .hero-btn {
+                background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--light-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .scholarships-contact .hero-btn:hover {
+                background-color: var(--light-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .scholarships-hero .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .scholarships-hero .hero-content p {
+          font-size: 1rem;
+        }
+
+        .scholarships-overview .about-img {
+          margin-bottom: 1.5rem;
+        }
+
+        .scholarship-card .card-body {
+          padding: 1.5rem;
+        }
+
+        .process-card {
+          padding: 1.5rem;
+        }
+      }
